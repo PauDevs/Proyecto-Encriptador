@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<body>
+    <header class="logo__header">
+        <img class="logo__img" src="./assets/Logo.png" alt="logo-alura">
+    </header>
+    <div id="toast" class="toast"></div>
+    <main>
+        <section class="ingresar__texto">
+            <textarea id="inputText" class="ingresarTexto" cols="30" rows="10" placeholder="Ingrese texto aquí"></textarea>
+            <p id="outputText" class="parrafo__persona"></p>
+             <div class="boton__contenedor">
+                <img src="./assets/bi_exclamation-circle-fill.png" alt="icono_exclamacion" class="icono_contenedor"><span>Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div class="botones__encriptar">
+                <input class="btnOne" type="button" value="Encriptar" onclick="encriptarTexto()">
+                <input class="btnDos" type="button" value="Desinciptar" onclick="desencriptarTexto()">
+
+            </div>
+        </section>
+        <aside id="resultado" class="persona__img">
+            <img src="./assets/Muñeco.png" alt="imagen inicial" class="persona__curiosa" id="resultado-img">
+            <div class="personaTexto" id="resultado-texto">
+                <h3 id="resultado-texto-h3">Ningún mensaje fue encontrado</h3>
+                <p id="resultado-texto-p">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="btnCopy" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </aside>        
+    </main>
+    <footer class="footer">
+        Desarrollo web &copyPauDevOps
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

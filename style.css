@@ -1,0 +1,425 @@
+/* Estilos generales */
+:root {
+    --colorprimario: #E5E5E5;
+    --colorsecundario: #FFFFFF;
+    --colorterciario: #0A3871;
+    --colorhover: #EBF4F6;
+ }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+.logo__header {
+    background-color: var(--colorprimario);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+    background-color: var(--colorprimario);
+}
+
+.logo__header {
+    padding: 10px;
+}
+
+.logo__img {
+    padding: 0;
+}
+
+.ingresar__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 69%;
+    margin: 2.5px;
+    padding: 2.5px;
+    flex-direction: column;
+    height: 75%;
+    border-color: transparent;
+    outline: none;
+}
+
+.ingresarTexto:focus {
+    outline: none; /* Elimina el borde azul predeterminado */
+    box-shadow: none; /* Elimina cualquier sombra de enfoque que pueda estar presente */
+}
+
+.ingresarTexto {
+    background-color: transparent;
+    justify-content: center;
+    flex-grow: 1;
+    display: flex;
+    width: 65%;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    height: 85%;
+    font-size: 32px;
+    resize: none;
+}
+
+.icono_contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.boton__contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.botones__encriptar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: auto;
+    margin-top: 2.5px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.btnOne {
+    background-color: var(--colorterciario);
+    color: var(--colorsecundario);
+}
+
+.btnDos {
+    background-color: #D8DFE8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.btnOne, .btnDos {
+    /* ... */
+    width: 150px; /* Ajusta el ancho al 100% del contenedor */
+    height: 40px;
+    margin-left: 2.5px;
+    margin-top: 2.5px;
+    padding-left: 2.5px;
+    border-radius: 5px;
+
+     /* Agrega bordes redondeados */
+     font-size: 16px; /* Ajusta el tamaño de la fuente */
+     border: none; /* Elimina el borde */
+     cursor: pointer; /* Cambia el cursor a un puntero */
+ }
+
+ aside.persona__img {
+    display: flex;
+    flex-direction: column;
+
+    width: 400px;
+    max-height: 100vh; justify-content: center;
+    overflow-y: hidden;
+    border-radius: 15px;
+    background-color: var(--colorsecundario);
+}
+
+.persona__img {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    height: 515px;
+    background-color: var(--colorsecundario);
+}
+
+.persona__curiosa {
+   width: 336px;
+   height: 304px;
+    background-color: var(--colorsecundario);
+    
+}
+.personaTexto {
+    width: 336px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.personaM1 {
+    font-family: inherit;
+    line-height: 1.4;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px
+}
+
+.personaTexto p {
+    line-height: 1.4; 
+    justify-content: center;
+    text-align: center;
+}
+
+.footer {
+    background-color: #adc6e7; 
+    color: var(--colorterciario);
+    text-align: center; 
+    padding: 10px; 
+}
+
+aside#resultado {
+    display: flex;
+    flex-direction: column;
+    width: 400px; /* Asegura un ancho fijo */
+    height: 515px; /* Ajusta la altura para que sea consistente con la imagen */
+    overflow-y: hidden;
+    border-radius: 15px;
+    background-color: var(--colorsecundario); /* Color de fondo por defecto */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#resultado-img {
+    display: block; /* Muestra la imagen inicialmente */
+    width: 100%;
+    height: auto; /* Ajusta automáticamente la altura de la imagen */
+}
+
+#resultado-texto {
+    display: flex; /* Mostrar el texto junto con la imagen */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #D8DFE8; /* Color de fondo cuando se muestra el texto */
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%; 
+    height: 100%;
+}
+
+#resultado-texto h3, #resultado-texto p {
+    margin: 0;
+    padding: 5px;
+}
+
+.btnCopy {
+    background-color: var(--colorterciario);
+    color: var(--colorsecundario);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Oculta el botón de copiar inicialmente */
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--colorterciario); /* Color terciario */
+    color: var(--colorsecundario); /* Color blanco */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000; /* Asegura que el toast esté por encima de otros elementos */
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/* Media Query para Tablets */
+
+@media (max-width: 768px) {
+    /* Ajustes para el header */
+    .logo__header {
+        text-align: center; /* Centra el logo en tablet */
+        padding: 10px;
+    }
+
+    .logo__img {
+        width: 150px; /* Ajusta el tamaño del logo en tablet */
+        height: auto;
+    }
+
+    /* Ajustes para el main */
+    main {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center; /* Centra el contenido */
+        padding: 10px; /* Añade un poco de espacio alrededor del contenido */
+    }
+
+    /* Ajustes para el textarea */
+    .ingresar__texto {
+        width: 90%; /* Ajusta el ancho del contenedor del textarea */
+        margin: 0; /* Elimina el margen */
+        padding: 0; /* Elimina el padding */
+    }
+
+    .ingresarTexto {
+        width: 100%; /* Ajusta el ancho del textarea */
+        height: 150px; /* Ajusta la altura del textarea */
+        font-size: 24px; /* Ajusta el tamaño de la fuente en el textarea */
+    }
+
+    /* Ajustes para los botones */
+    .botones__encriptar {
+        width: 100%; /* Ajusta el ancho del contenedor de los botones */
+        justify-content: center; /* Centra los botones */
+        margin-top: 10px; /* Añade un poco de espacio arriba */
+        margin-bottom: 20px; /* Añade un poco de espacio abajo */
+    }
+
+    .btnOne, .btnDos {
+        width: 120px; /* Ajusta el ancho de los botones */
+        height: 35px; /* Ajusta la altura de los botones */
+    }
+
+    /* Ajustes para el aside */
+    aside#resultado {
+        width: 90%; /* Ajusta el ancho del aside */
+        height: auto; /* Ajusta la altura del aside */
+        padding: 10px; /* Añade un poco de espacio alrededor del contenido */
+    }
+
+    #resultado-img {
+        display: none; /* Oculta la imagen en tablet */
+    }
+
+    #resultado-texto {
+        display: flex; /* Muestra el texto */
+        flex-direction: column;
+        align-items: center;
+        background-color: #D8DFE8;
+        width: 100%; /* Asegura que el contenedor del texto ocupe el ancho completo */
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #resultado-texto h3, #resultado-texto p {
+        margin: 0;
+        padding: 5px;
+    }
+
+    /* Ajustes para el footer */
+    .footer {
+        font-size: 14px; /* Ajusta el tamaño de la fuente en el footer */
+        padding: 10px;
+    }
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 480px) {
+    /* Ajustes para el header */
+    .logo__header {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center; 
+        padding: 10px;
+        background-color: var(--colorprimario);
+        z-index: 1000; 
+    }
+
+    .logo__img {
+        width: 120px; 
+        height: auto;
+    }
+
+    main {
+        flex-direction: column; 
+        padding: 10px; 
+        margin-top: 60px; 
+    }
+
+    .ingresar__texto {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+    .ingresarTexto {
+        width: 100%; 
+        height: 150px;
+        font-size: 20px;
+    }
+
+    
+    .boton__contenedor {
+        display: flex;
+        flex-direction: column; 
+        gap: 5px; 
+        margin-bottom: 15px; 
+    }
+
+    .icono_contenedor {
+        display: flex;
+        justify-content: center; 
+    }
+
+    .botones__encriptar {
+        display: flex;
+        flex-direction: column; 
+        width: 100%; 
+    }
+
+    .btnOne, .btnDos {
+        width: 100%;
+        height: 40px; 
+        font-size: 16px; 
+    }
+
+    /* Ajustes para el aside */
+    aside#resultado {
+        width: 100%; 
+        height: auto; 
+        padding: 10px; 
+    }
+
+    #resultado-img {
+        display: none;
+    }
+
+    #resultado-texto {
+        display: flex; /* Muestra el texto */
+        flex-direction: column;
+        align-items: center;
+        background-color: #D8DFE8; 
+        width: 100%; 
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #resultado-texto h3, #resultado-texto p {
+        margin: 0;
+        padding: 5px;
+    }
+
+    .footer {
+        font-size: 14px; 
+        padding: 10px;
+    }
+}
+
+
